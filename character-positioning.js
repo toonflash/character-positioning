@@ -1,4 +1,4 @@
-function countLetters(string) {
+function letterPosition(string) {
 
     var noSpaceString = string.split(" ").join('');
     var letterCounts = {};
@@ -21,4 +21,4 @@ function countLetters(string) {
 
  };
  
- countLetters("lighthouse in the house");
+ letterPosition("lighthouse in the house");
