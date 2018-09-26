@@ -1,19 +1,18 @@
-function letterPosition(string) {
+function characterPosition(string) {
+    // add empty array for each character that logs it's index
 
     var noSpaceString = string.split(" ").join('');
     var letterCounts = {};
 
     for (var i = 0; i < noSpaceString.length; i++){
-        // go one leter at a time
-        // increment count for each leter
-        // store each count into object
 
-        // if letter doesn not yet exist in object initiate to 1
         if (!letterCounts[noSpaceString[i]]) {
-            letterCounts[noSpaceString[i]] = 1;
-        // otherwise increment
+            // add empty array for i current position starting at 0
+            letterCounts[noSpaceString[i]] = [i];
         } else {
-            letterCounts[noSpaceString[i]] += 1;
+            // push aditional postion into array if more than
+            // one instance of character
+            letterCounts[noSpaceString[i]].push(i);
         }
     }
 
@@ -21,4 +20,4 @@ function letterPosition(string) {
 
  };
  
- letterPosition("lighthouse in the house");
+ characterPosition("lighthouse in the house");
